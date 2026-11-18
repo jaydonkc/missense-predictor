@@ -1,0 +1,52 @@
+{
+  "coverage": {
+    "source_rows": 25,
+    "source_row_status": {
+      "anchor": 4,
+      "censored_turnover": 3,
+      "compound": 4,
+      "numeric_held_turnover": 9,
+      "source_identity_conflict": 2,
+      "training_residue": 3
+    },
+    "paired_variants": 9,
+    "paired_residues": 5
+  },
+  "per_observed_profile": {
+    "low_activity__low_abundance": {
+      "n": 0,
+      "correct": 0,
+      "control_correct": 0
+    },
+    "low_activity__preserved_abundance": {
+      "n": 7,
+      "correct": 4,
+      "control_correct": 3
+    },
+    "retained_activity__low_abundance": {
+      "n": 0,
+      "correct": 0,
+      "control_correct": 0
+    },
+    "retained_activity__preserved_abundance": {
+      "n": 2,
+      "correct": 0,
+      "control_correct": 0
+    }
+  },
+  "overall": {
+    "n": 9,
+    "correct": 4,
+    "control_correct": 3
+  },
+  "activity_low_binary_correct": 5,
+  "abundance_low_binary_correct": 5,
+  "mae": {
+    "turnover": 0.40158730993107955,
+    "control_turnover": 0.4013961262366039,
+    "reporter": 0.27894898630615017
+  },
+  "score_lock_sha256": "f7b71fb511fb573bd69302223ef361d5aab56e332cce45c2a76ca8201ea9e67c",
+  "assessment_sha256": "32120314b2d247bbb17f250df767480aaa8787abaaca2ca64bdf1d417155b6ab",
+  "reporter_extract_sha256": "4371f9d7725028894bcfc508af75d471b6a22c23a27e0cf3eac1912cc00b3d9d"
+}

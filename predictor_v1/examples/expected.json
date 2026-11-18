@@ -1,0 +1,22 @@
+{
+  "DNA and aligned protein": {
+    "example": "aligned_protein",
+    "variant": "chr10:100042514:C:T",
+    "score": 0.0016858441125157707
+  },
+  "DNA only": {
+    "example": "dna",
+    "variant": "chr10:100190936:A:G",
+    "score": 0.11287686870135065
+  },
+  "DNA and protein chemistry": {
+    "example": "protein_chemistry",
+    "variant": "chr10:100924241:A:G",
+    "score": 0.09013287886143428
+  },
+  "original full context": {
+    "example": "full_context",
+    "variant": "chr10:100482761:C:A",
+    "score": 0.30553620251697733
+  }
+}

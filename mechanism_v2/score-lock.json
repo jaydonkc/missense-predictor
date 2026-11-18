@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-11-18T19:31:44.326180+00:00",
+  "public_predictions": 9676,
+  "model_sha256": "c49a51ce86c306b21672b81292bdb9eafac61e4b327562f66f8c863ea63f5516",
+  "predictions_sha256": "06c9f96b60967a6758b8ef58f5d37dba35d29509b2f65cc12484d57543cc9cb6",
+  "protocol_sha256": "ff3f4e2d382f91e38fc2e90012aa858bb62809c0c21c94dbf0ec094b983e83d3",
+  "training_code_sha256": "d12641364d003bd8efe397a4ce998c58543d1a80e30cdc7e7aab51c7ece3011b",
+  "predictor_sha256": "84f2f5fc403bb50b64823df9431f77806f88b3652329414c837886537b2f4efd",
+  "source_hashes": {
+    "turnover": "1766ca8a060fdbd00bb5dac61275e58b669e5a7104bf0ccf7cd37a65415ce7cc",
+    "reporter": "ccd94bb0e4a0076bffe07b7a1d09bc30ce075e7d802d61877cc2cff583fb1a95",
+    "features": "9316ccbd8183f3da7ee70467df57bd65226fd8b6ac6d0aa3e16a931840f72b72",
+    "endpoint": "2f838c0c4b7d657a86fad8128f790e7ebab5c93d026e0b96390d2a4e6bb8d881",
+    "reference": "67e9757116b94e933ca8f20856d069beea004270f6d3daeb6e1aacb1c13791b1"
+  }
+}

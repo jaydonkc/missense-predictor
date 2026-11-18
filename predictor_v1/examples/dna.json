@@ -1,0 +1,9 @@
+{
+  "assembly": "GRCh38",
+  "chrom": "chr10",
+  "position_0based": 100190936,
+  "ref": "A",
+  "alt": "G",
+  "dna_window": "GTTCAAATTTT",
+  "phylop": 1.6510000228881836
+}

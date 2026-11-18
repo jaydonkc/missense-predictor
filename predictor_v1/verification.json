@@ -1,0 +1,33 @@
+{
+  "scope": "Frozen released heads evaluated on original qualified feature inputs and compared with archived score export. Original ambiguity policy used for the seven unspecified replacements. No clinical labels accessed.",
+  "score_rows": 198876,
+  "cutoff": 0.4343183620275828,
+  "model_sha256": "400c7662377d0adc1f6d80a2f72f319c833bd0fb1b83a10d07750e65a6b39cd9",
+  "by_route": {
+    "DNA and aligned protein": {
+      "rows": 160361,
+      "largest_absolute_score_error": 0,
+      "call_disagreements": 0
+    },
+    "DNA only": {
+      "rows": 15111,
+      "largest_absolute_score_error": 0,
+      "call_disagreements": 0
+    },
+    "original full context": {
+      "rows": 23026,
+      "largest_absolute_score_error": 0,
+      "call_disagreements": 0
+    },
+    "DNA and protein chemistry": {
+      "rows": 371,
+      "largest_absolute_score_error": 0,
+      "call_disagreements": 0
+    },
+    "ambiguous-base policy": {
+      "rows": 7,
+      "largest_absolute_score_error": 0,
+      "call_disagreements": 0
+    }
+  }
+}

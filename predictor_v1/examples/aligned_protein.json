@@ -1,0 +1,30 @@
+{
+  "assembly": "GRCh38",
+  "chrom": "chr10",
+  "position_0based": 100042514,
+  "ref": "C",
+  "alt": "T",
+  "dna_window": "TTCTGCTGGGA",
+  "phylop": -0.9490000009536743,
+  "protein": {
+    "transcript_id": "ENST00000370418.8",
+    "protein_id": "ENSP00000359446.3",
+    "ref_aa": "S",
+    "alt_aa": "N",
+    "residue_1based": 430,
+    "alignment": {
+      "effective_species": 43.62183025267343,
+      "weighted_ref_fraction": 0.3164491455041006,
+      "weighted_alt_fraction": 0.30413219453204865,
+      "entropy_nats": 1.673407849593295,
+      "log_ref_alt": 0.03811684068593597,
+      "blosum_log_ref_alt": -0.47044481293751444,
+      "nearest_callable_distance": 0.019733999999999696,
+      "nearest_alt_support": 0.7812328735717288,
+      "clades_callable": 13.0,
+      "clades_with_alt": 3.0,
+      "primate_callable": 10.0,
+      "primate_alt": 0.0
+    }
+  }
+}

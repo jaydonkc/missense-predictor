@@ -1,8 +1,11 @@
-# Missense predictor
+# Human missense predictor
 
-A research prototype for scoring human missense variants and reporting supporting protein and RNA evidence. The pipeline separates the retained DNA and protein score from evidence that is available for interpretation. EVEE serves as a benchmark.
+This research release scores human missense variants from prepared molecular features and reports testable assay predictions on supported proteins. EVEE is the clinical benchmark. V1 scores the clinical endpoint. V2 tests a biological hypothesis.
 
-## Run the demo
+- **V1 clinical score.** The frozen paper-wide heads score a prepared GRCh38 allele. The report records the route and operating cutoff. On 161,579 variants outside historical training and development the model missed 2,689 pathogenic variants versus EVEE's 2,911, and flagged 22,372 benign variants versus EVEE's 12,752. [Architecture, decisions and benchmarks](REPORT.md) · [Full replay receipt](predictor_v1/verification.json)
+- **V2 experimental assay profile.** A frozen G6PD model estimates catalytic turnover relative to wild type and normalized human-cell reporter abundance. A lookup covers 9,676 substitutions on one human G6PD reference. The clinical predictor does not consume these experimental estimates. On nine substitutions at held-out residues, V2 correctly predicted both measurements for four, versus three for an abundance-only control. [V2 results and reproducible evaluation](mechanism_v2/README.md)
+
+## Run the predictors
 
 From the repository root with Python 3.12:
 
@@ -10,23 +13,13 @@ From the repository root with Python 3.12:
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-python demo.py
+python -m predictor_v1.score predictor_v1/examples/aligned_protein.json
+python -m mechanism_v2.report T279A
+python -m evee_next.biology.assay_report ENSP00000377192.3 279 T A --compare-alt P --format markdown
 ```
 
-Open `demo.ipynb` in Jupyter for the same walkthrough. The example uses synthetic inputs and weights and shows the baseline score, final score, route dispositions, and the evidence used in scoring.
+The first command after installation runs a real clinical checkpoint. New clinical inputs need a qualified reference window and the route-specific molecular features. The original full-context route also requires upstream features and a frozen parent score; a genome coordinate alone cannot reconstruct those inputs. Assay reports identify the endpoint, units and applicable protein reference. The numerical outputs are uncalibrated for clinical use.
 
-## Research scope
+The original synthetic walkthrough remains available through `python demo.py` or `demo.ipynb`. A configured lab environment can use `python -m evee_next.biology.routed request.json --config pipeline.json --policy cache-only`.
 
-The lab's retained checkpoint has been replayed on 472 archived development alleles using their saved transformed features. The demo uses a synthetic bundle because this preview ships without lab checkpoints, clinical or assay targets, reference databases, or third-party predictor assets. Real scoring requires a separately qualified checkpoint and exact input features. The retained sigmoid score is uncalibrated.
-
-The earlier ASPA/G6PD abundance extension and G6PD growth diagnostic failed their advancement rules. Routed annotations and named effect outputs can be reported separately from scoring. See the CLI options with `python -m evee_next.biology.routed --help`.
-
-## Run with lab artifacts
-
-A lab configuration can reference a qualified cache bundle or checkpoint. Run:
-
-```sh
-python -m evee_next.biology.routed request.json --config pipeline.json --policy cache-only
-```
-
-The demo script shows the request and configuration shapes. Real artifacts require provenance and version checks.
+See the [v1 input contract and worked examples](predictor_v1/README.md) before scoring new variants.

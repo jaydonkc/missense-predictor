@@ -1,0 +1,11 @@
+{
+  "schema": "paper-missense-release/v1",
+  "model_sha256": "400c7662377d0adc1f6d80a2f72f319c833bd0fb1b83a10d07750e65a6b39cd9",
+  "chemistry_sha256": "134751dbc64825f0614b9490fdc98f67b40f9da621dffd9d8c64d7eee1cd768a",
+  "abundance_growth_packet_sha256": "67e9757116b94e933ca8f20856d069beea004270f6d3daeb6e1aacb1c13791b1",
+  "cutoff": 0.4343183620275828,
+  "source_broad_checkpoint_sha256": "4abd83cf42d79f094e11f4626da09254943c1de924c96b6385ab5749aac52bb4",
+  "source_full_context_manifest_sha256": "ef2bfc945d739a54d31439311836e2fd12c1dd65d78258ca063592594595f04a",
+  "source_score_lock_sha256": "8b8bd8c3952f55070a9f25f146b6f7724eeed35fddb7a0f1ef122d1cbf959d8b",
+  "source_cutoff_lock_sha256": "97c1f33fb781bd9f36392c67509b0368db6ce2723a5738db2538c4782ee25d89"
+}

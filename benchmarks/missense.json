@@ -1,0 +1,210 @@
+{
+  "archive": "https://doi.org/10.5281/zenodo.19701997",
+  "cohort_type": "retrospective, previous investigations; outside historical training and development",
+  "unit": "unique genomic alleles",
+  "paper_total": 198876,
+  "cutoff_calibration": {
+    "n": 8048,
+    "pathogenic": 2180,
+    "ours_true_positives": 2001,
+    "EVEE_true_positives": 2001
+  },
+  "ours_cutoff": 0.4343183620275828,
+  "evee_cutoff": 0.1922,
+  "primary": {
+    "n": 161579,
+    "pathogenic": 44644,
+    "benign": 116935,
+    "ours": {
+      "tp": 41955,
+      "tn": 94563,
+      "fn": 2689,
+      "fp": 22372,
+      "errors": 25061,
+      "sensitivity": 0.9397679419406864,
+      "specificity": 0.80868003591739,
+      "balanced_accuracy": 0.8742239889290382,
+      "AUROC": 0.9465138520708883
+    },
+    "EVEE": {
+      "tp": 41733,
+      "tn": 104183,
+      "fn": 2911,
+      "fp": 12752,
+      "errors": 15663,
+      "sensitivity": 0.9347952692411075,
+      "specificity": 0.8909479625432933,
+      "balanced_accuracy": 0.9128716158922003,
+      "corrected_fn": 1776,
+      "introduced_fn": 1554,
+      "corrected_fp": 3411,
+      "introduced_fp": 13031,
+      "AUROC": 0.9708256546633005
+    },
+    "paired_gene_bootstrap_95_sensitivity_difference": [
+      0.00016965295866145752,
+      0.009475190099564634
+    ]
+  },
+  "aligned_same_variants": {
+    "n": 146123,
+    "pathogenic": 42609,
+    "benign": 103514,
+    "before": {
+      "fn": 4935,
+      "fp": 27223,
+      "auc": 0.8953036921776455
+    },
+    "after": {
+      "fn": 2331,
+      "fp": 20691,
+      "auc": 0.9463091718222352
+    },
+    "EVEE": {
+      "fn": 2775,
+      "fp": 11962,
+      "auc": 0.9692343250892861
+    },
+    "after_vs_before": {
+      "pathogenic_rescued": 3452,
+      "pathogenic_newly_missed": 848,
+      "benign_corrected": 10221,
+      "benign_newly_flagged": 3689
+    },
+    "after_vs_EVEE": {
+      "pathogenic_rescued": 1706,
+      "pathogenic_newly_missed": 1262,
+      "benign_corrected": 3119,
+      "benign_newly_flagged": 11848
+    }
+  },
+  "original_DNA_only_recovery": {
+    "n": 15106,
+    "pathogenic": 1965,
+    "benign": 13141,
+    "before": {
+      "fn": 347,
+      "fp": 1645,
+      "auc": 0.9268609617395046
+    },
+    "after": {
+      "fn": 401,
+      "fp": 911,
+      "auc": 0.9445636125538371
+    },
+    "EVEE": {
+      "fn": 129,
+      "fp": 776,
+      "auc": 0.9827988001734176
+    },
+    "after_vs_before": {
+      "pathogenic_rescued": 104,
+      "pathogenic_newly_missed": 158,
+      "benign_corrected": 814,
+      "benign_newly_flagged": 80
+    },
+    "after_vs_EVEE": {
+      "pathogenic_rescued": 43,
+      "pathogenic_newly_missed": 315,
+      "benign_corrected": 419,
+      "benign_newly_flagged": 554
+    }
+  },
+  "recovered_only": {
+    "n": 9875,
+    "pathogenic": 1727,
+    "benign": 8148,
+    "before": {
+      "fn": 258,
+      "fp": 1280,
+      "auc": 0.9228088270868493
+    },
+    "after": {
+      "fn": 312,
+      "fp": 546,
+      "auc": 0.9557787190593021
+    },
+    "EVEE": {
+      "fn": 115,
+      "fp": 660,
+      "auc": 0.9765652382288406
+    },
+    "after_vs_before": {
+      "pathogenic_rescued": 104,
+      "pathogenic_newly_missed": 158,
+      "benign_corrected": 814,
+      "benign_newly_flagged": 80
+    },
+    "after_vs_EVEE": {
+      "pathogenic_rescued": 37,
+      "pathogenic_newly_missed": 234,
+      "benign_corrected": 360,
+      "benign_newly_flagged": 246
+    }
+  },
+  "recovery_by_transcript": {
+    "alternative transcript / DNA and protein chemistry": {
+      "n": 391,
+      "pathogenic": 15,
+      "benign": 376,
+      "old_fn": 6,
+      "new_fn": 5,
+      "EVEE_fn": 2,
+      "old_fp": 25,
+      "new_fp": 51,
+      "EVEE_fp": 5,
+      "rescued_fn": 1,
+      "introduced_fn": 0,
+      "rescued_fp": 4,
+      "introduced_fp": 30
+    },
+    "unresolved / DNA only": {
+      "n": 5231,
+      "pathogenic": 238,
+      "benign": 4993,
+      "old_fn": 89,
+      "new_fn": 89,
+      "EVEE_fn": 14,
+      "old_fp": 365,
+      "new_fp": 365,
+      "EVEE_fp": 116,
+      "rescued_fn": 0,
+      "introduced_fn": 0,
+      "rescued_fp": 0,
+      "introduced_fp": 0
+    },
+    "alternative transcript / DNA and aligned protein": {
+      "n": 9451,
+      "pathogenic": 1695,
+      "benign": 7756,
+      "old_fn": 246,
+      "new_fn": 302,
+      "EVEE_fn": 111,
+      "old_fp": 1254,
+      "new_fp": 495,
+      "EVEE_fp": 655,
+      "rescued_fn": 100,
+      "introduced_fn": 156,
+      "rescued_fp": 809,
+      "introduced_fp": 50
+    },
+    "paper transcript / DNA and aligned protein": {
+      "n": 33,
+      "pathogenic": 17,
+      "benign": 16,
+      "old_fn": 6,
+      "new_fn": 5,
+      "EVEE_fn": 2,
+      "old_fp": 1,
+      "new_fp": 0,
+      "EVEE_fp": 0,
+      "rescued_fn": 3,
+      "introduced_fn": 2,
+      "rescued_fp": 1,
+      "introduced_fp": 0
+    }
+  },
+  "benchmark_input_scores_sha256": "1ccbcea6950d5efd67a640b094b93d0ed9d3f5fd47c2ef6aa51a5e2d5de8b976",
+  "source_aggregate_sha256": "f6454ed8c0d3b7ce5104bd31417ac45c25eae49354173900f02311b42eb85283",
+  "threshold_lock_sha256": "97c1f33fb781bd9f36392c67509b0368db6ce2723a5738db2538c4782ee25d89"
+}

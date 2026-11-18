@@ -1,0 +1,374 @@
+{
+  "predictions_sha256": "d3ecbc21508bb330c0dee08f538a2cb0c8952c3c9fbff0b4d24a00e53b6ba62e",
+  "measurements_sha256": "d3fd9dd05cb3a471dcc620f12db7f6388bb527d7ec5d33f5eb7df68b6cc1eee6",
+  "studies": {
+    "Hershfield": {
+      "all_rows": 26,
+      "scored_rows": 21,
+      "observed": {
+        "selective": 8,
+        "neither": 3,
+        "dual": 10
+      },
+      "excluded": [
+        [
+          "E24G",
+          "source_censored"
+        ],
+        [
+          "C124A",
+          "source_censored"
+        ],
+        [
+          "C152A",
+          "source_censored"
+        ],
+        [
+          "G274R",
+          "source_censored"
+        ],
+        [
+          "D204H",
+          "source_censored"
+        ]
+      ],
+      "confusion": {
+        "category": {
+          "selective": {
+            "dual": 5,
+            "selective": 2,
+            "neither": 1
+          },
+          "dual": {
+            "dual": 10
+          },
+          "neither": {
+            "neither": 3
+          }
+        },
+        "abundance_only": {
+          "selective": {
+            "dual": 5,
+            "neither": 3
+          },
+          "dual": {
+            "dual": 10
+          },
+          "neither": {
+            "neither": 3
+          }
+        }
+      },
+      "scores": {
+        "category": {
+          "correct": 15,
+          "correct_by_class": {
+            "selective": 2,
+            "neither": 3,
+            "dual": 10
+          },
+          "observed_class_macro_recall": 0.75
+        },
+        "abundance_only": {
+          "correct": 13,
+          "correct_by_class": {
+            "selective": 0,
+            "neither": 3,
+            "dual": 10
+          },
+          "observed_class_macro_recall": 0.6666666666666666
+        }
+      },
+      "rows": [
+        {
+          "substitution": "H21G",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.23050918702541942,
+          "distance_A": 2.2300838549256414
+        },
+        {
+          "substitution": "E24D",
+          "observed": "selective",
+          "prediction": "selective",
+          "abundance": 0.5141714144065905,
+          "distance_A": 2.1468632932723035
+        },
+        {
+          "substitution": "H116G",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.3376512463508283,
+          "distance_A": 2.288610277002185
+        },
+        {
+          "substitution": "E178A",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.4384231637840744,
+          "distance_A": 2.9337786215050365
+        },
+        {
+          "substitution": "R71N",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.4742349602366698,
+          "distance_A": 2.787088803752043
+        },
+        {
+          "substitution": "R63N",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.43482693555720264,
+          "distance_A": 2.8379143750296607
+        },
+        {
+          "substitution": "C61A",
+          "observed": "neither",
+          "prediction": "neither",
+          "abundance": 0.5975017792782765,
+          "distance_A": 11.906091760103314
+        },
+        {
+          "substitution": "C61S",
+          "observed": "neither",
+          "prediction": "neither",
+          "abundance": 0.6336440826152243,
+          "distance_A": 11.906091760103314
+        },
+        {
+          "substitution": "C61W",
+          "observed": "dual",
+          "prediction": "dual",
+          "abundance": 0.481750334805606,
+          "distance_A": 11.906091760103314
+        },
+        {
+          "substitution": "C152W",
+          "observed": "dual",
+          "prediction": "dual",
+          "abundance": 0.39955065496089837,
+          "distance_A": 13.872311595404714
+        },
+        {
+          "substitution": "D249V",
+          "observed": "dual",
+          "prediction": "dual",
+          "abundance": 0.3208855551551024,
+          "distance_A": 14.012979055147406
+        },
+        {
+          "substitution": "A305E",
+          "observed": "dual",
+          "prediction": "dual",
+          "abundance": 0.41186696860397565,
+          "distance_A": 21.328826362460738
+        },
+        {
+          "substitution": "D68A",
+          "observed": "dual",
+          "prediction": "dual",
+          "abundance": 0.35321489899541203,
+          "distance_A": 4.5784892704908655
+        },
+        {
+          "substitution": "E285A",
+          "observed": "selective",
+          "prediction": "selective",
+          "abundance": 0.5242623983481071,
+          "distance_A": 3.5933634661692624
+        },
+        {
+          "substitution": "H21P",
+          "observed": "dual",
+          "prediction": "dual",
+          "abundance": 0.261963091808341,
+          "distance_A": 2.2300838549256414
+        },
+        {
+          "substitution": "I143T",
+          "observed": "dual",
+          "prediction": "dual",
+          "abundance": 0.46798626529818965,
+          "distance_A": 14.282201440954406
+        },
+        {
+          "substitution": "F295S",
+          "observed": "dual",
+          "prediction": "dual",
+          "abundance": 0.31352571680416885,
+          "distance_A": 11.161611263612436
+        },
+        {
+          "substitution": "M195R",
+          "observed": "dual",
+          "prediction": "dual",
+          "abundance": 0.28118233414400134,
+          "distance_A": 8.50925672429737
+        },
+        {
+          "substitution": "A57T",
+          "observed": "dual",
+          "prediction": "dual",
+          "abundance": 0.38785294071893905,
+          "distance_A": 10.709821660513306
+        },
+        {
+          "substitution": "P183H",
+          "observed": "selective",
+          "prediction": "neither",
+          "abundance": 0.5220828596729408,
+          "distance_A": 9.88812444298715
+        },
+        {
+          "substitution": "K213E",
+          "observed": "neither",
+          "prediction": "neither",
+          "abundance": 0.6729201249737715,
+          "distance_A": 28.104071982543747
+        }
+      ]
+    },
+    "Mendes": {
+      "all_rows": 14,
+      "scored_rows": 13,
+      "observed": {
+        "selective": 13
+      },
+      "excluded": [
+        [
+          "D204H",
+          "source_censored"
+        ]
+      ],
+      "confusion": {
+        "category": {
+          "selective": {
+            "dual": 8,
+            "neither": 4,
+            "selective": 1
+          },
+          "dual": {},
+          "neither": {}
+        },
+        "abundance_only": {
+          "selective": {
+            "dual": 8,
+            "neither": 5
+          },
+          "dual": {},
+          "neither": {}
+        }
+      },
+      "scores": {
+        "category": {
+          "correct": 1,
+          "correct_by_class": {
+            "selective": 1
+          },
+          "observed_class_macro_recall": 0.07692307692307693
+        },
+        "abundance_only": {
+          "correct": 0,
+          "correct_by_class": {
+            "selective": 0
+          },
+          "observed_class_macro_recall": 0.0
+        }
+      },
+      "rows": [
+        {
+          "substitution": "E24K",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.34772156197236137,
+          "distance_A": 2.1468632932723035
+        },
+        {
+          "substitution": "L30P",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.31137550410602266,
+          "distance_A": 12.897807759460521
+        },
+        {
+          "substitution": "A57V",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.38150345991262236,
+          "distance_A": 10.709821660513306
+        },
+        {
+          "substitution": "R63T",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.43548588847816544,
+          "distance_A": 2.8379143750296607
+        },
+        {
+          "substitution": "L69R",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.23598448953513385,
+          "distance_A": 6.821861476166169
+        },
+        {
+          "substitution": "G101V",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.3900919909910277,
+          "distance_A": 18.241487165250536
+        },
+        {
+          "substitution": "E129K",
+          "observed": "selective",
+          "prediction": "neither",
+          "abundance": 0.5727911981383869,
+          "distance_A": 6.127432741368932
+        },
+        {
+          "substitution": "I170T",
+          "observed": "selective",
+          "prediction": "neither",
+          "abundance": 0.5907808152627302,
+          "distance_A": 11.714802132345213
+        },
+        {
+          "substitution": "G180V",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.1913122213436175,
+          "distance_A": 8.672062096179895
+        },
+        {
+          "substitution": "Q248R",
+          "observed": "selective",
+          "prediction": "neither",
+          "abundance": 0.5312831599610276,
+          "distance_A": 13.461488922106646
+        },
+        {
+          "substitution": "E285A",
+          "observed": "selective",
+          "prediction": "selective",
+          "abundance": 0.5242623983481071,
+          "distance_A": 3.5933634661692624
+        },
+        {
+          "substitution": "A286D",
+          "observed": "selective",
+          "prediction": "neither",
+          "abundance": 0.522342061646654,
+          "distance_A": 6.843882889120764
+        },
+        {
+          "substitution": "A305E",
+          "observed": "selective",
+          "prediction": "dual",
+          "abundance": 0.41186696860397565,
+          "distance_A": 21.328826362460738
+        }
+      ]
+    }
+  }
+}

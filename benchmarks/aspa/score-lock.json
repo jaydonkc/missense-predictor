@@ -1,0 +1,11 @@
+{
+  "source_structure_sha256": "3a8006de018dd7d610347a962f620689add2bcb998035e9ad049d4526a57bd37",
+  "structured_residues": 301,
+  "target_free_packet": "2f838c0c4b7d657a86fad8128f790e7ebab5c93d026e0b96390d2a4e6bb8d881",
+  "predictions_sha256": "d3ecbc21508bb330c0dee08f538a2cb0c8952c3c9fbff0b4d24a00e53b6ba62e",
+  "reference": "ENSP00000263080.2",
+  "protein_sha256": "fd33f71103705a115325f7cb2b64210185c27a11a76105a72574043e8786bd15",
+  "script_sha256": "d4d60c0e9b54c25383127bace9da786d5c938d44e84b99aa7c241e1fba2fdc5a",
+  "protocol_sha256": "cf77419ffa51dbdc221d00875cf767bea15d81414a04d3b7e2ea040473dfe1cb",
+  "rows": 5843
+}

@@ -1,0 +1,41 @@
+study	substitution	activity	amount	evidence
+Hershfield	H21G	low	preserved	Fig4
+Hershfield	E24D	low	preserved	Fig4
+Hershfield	E24G	low	censored	Fig4-text conflicts with Fig7A on abundance
+Hershfield	H116G	low	preserved	Fig4
+Hershfield	E178A	low	preserved	Fig4
+Hershfield	R71N	low	preserved	Fig4
+Hershfield	R63N	low	preserved	Fig4
+Hershfield	C61A	preserved	preserved	Fig6
+Hershfield	C61S	preserved	preserved	Fig6
+Hershfield	C61W	low	low	Fig6
+Hershfield	C124A	censored	low	Fig6 approximately half WT activity
+Hershfield	C152A	censored	low	Fig6 approximately half WT activity
+Hershfield	C152W	low	low	Fig7A
+Hershfield	D249V	low	low	Fig7A
+Hershfield	A305E	low	low	Fig7A
+Hershfield	D68A	low	low	Fig7A
+Hershfield	E285A	low	preserved	Fig7A
+Hershfield	H21P	low	low	Fig7B
+Hershfield	I143T	low	low	Fig7B
+Hershfield	F295S	low	low	Fig7B
+Hershfield	M195R	low	low	Fig7B
+Hershfield	G274R	censored	low	Fig7B residual vs Fig7C undetectable
+Hershfield	A57T	low	low	Fig7B
+Hershfield	P183H	low	preserved	Fig7B
+Hershfield	K213E	preserved	preserved	Fig7B
+Hershfield	D204H	censored	censored	Construct primer listed without paired endpoint disposition
+Mendes	E24K	low	preserved	Fig3 and residual activity paragraph
+Mendes	L30P	low	preserved	Fig3 and residual activity paragraph
+Mendes	A57V	low	preserved	Fig3 and residual activity paragraph
+Mendes	R63T	low	preserved	Fig3 and residual activity paragraph
+Mendes	L69R	low	preserved	Fig3 and residual activity paragraph
+Mendes	G101V	low	preserved	Fig3 and residual activity paragraph
+Mendes	E129K	low	preserved	Fig3 and residual activity paragraph
+Mendes	I170T	low	preserved	Fig3 and 5.5 percent WT hydrolysis
+Mendes	G180V	low	preserved	Fig3 and residual activity paragraph
+Mendes	D204H	censored	preserved	Fig3 and 12.4 percent WT hydrolysis
+Mendes	Q248R	low	preserved	Fig3 and residual activity paragraph
+Mendes	E285A	low	preserved	Fig3 and 2.7 percent WT hydrolysis
+Mendes	A286D	low	preserved	Fig3 and residual activity paragraph
+Mendes	A305E	low	preserved	Fig3 and residual activity paragraph

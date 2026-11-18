@@ -136,8 +136,13 @@ def configure(config_path,*,mode='cache-only'):
 
 
 def write_report(path,report):
+    # Preserve the historical report-writer API and create-only publication.
+    if isinstance(report, str):
+        payload = report.encode()
+    else:
+        obj = report if isinstance(report, dict) else report_dict(report)
+        payload = (json.dumps(obj, sort_keys=True, indent=2, allow_nan=False) + '\n').encode()
     path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
-    payload=(json.dumps(report_dict(report),sort_keys=True,indent=2,allow_nan=False)+'\n').encode()
     fd,tmp=tempfile.mkstemp(prefix='.'+path.name+'-',dir=path.parent)
     try:
         with os.fdopen(fd,'wb') as stream:
@@ -148,20 +153,55 @@ def write_report(path,report):
 
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('request',type=Path);parser.add_argument('--config',type=Path,required=True)
+    parser.add_argument('request',type=Path);parser.add_argument('--config',type=Path)
     parser.add_argument('--policy',choices=('cache-only','bounded-retrieval'),default='cache-only')
     parser.add_argument('--output',type=Path)
+    parser.add_argument('--assay-report', action='store_true', help='Report testable assay predictions and their clinical role')
+    parser.add_argument('--compare-request', type=Path, help='Compare a second substitution at the same residue in an assay report')
+    parser.add_argument('--format', choices=('json', 'markdown'), default='json',
+                        help='Markdown renders a lab-facing assay report')
+    parser.add_argument('--paper-study', type=Path, help='Add separate exact-allele scores from the locked paper study directory; --config adds the live routes')
     args=parser.parse_args(argv);pipeline=None
     try:
-        raw=_json(args.request)
-        if not isinstance(raw,dict) or not set(raw)<={f.name for f in fields(VariantRequest)}:
-            raise ValueError('Only the variant request fields are accepted')
-        request=VariantRequest(**raw);pipeline,policy=configure(args.config,mode=args.policy)
-        report=pipeline.analyze(request,policy=policy)
-        if args.output:write_report(args.output,report)
-        else:print(json.dumps(report_dict(report),sort_keys=True,indent=2,allow_nan=False))
+        def request_from(path):
+            raw = _json(path)
+            if not isinstance(raw, dict) or not set(raw) <= {f.name for f in fields(VariantRequest)}:
+                raise ValueError('Only the variant request fields are accepted')
+            return VariantRequest(**raw)
+        request = request_from(args.request)
+        other = request_from(args.compare_request) if args.compare_request else None
+        if not args.config and not args.paper_study:
+            raise ValueError('Provide --config for the live model or --paper-study for frozen archive lookup')
+        if args.config:
+            pipeline, policy = configure(args.config, mode=args.policy)
+        if args.assay_report or other is not None or args.format == 'markdown' or args.paper_study:
+            from .assay_report import archive_case, build_report, render_markdown, routed_case
+            queries = [request] if other is None else [request, other]
+            snapshots = None
+            if args.paper_study:
+                from .paper_snapshot import lookups
+                snapshots = lookups(args.paper_study, queries)
+            cases = []
+            for query in queries:
+                case = routed_case(pipeline.analyze(query, policy=policy)) if pipeline else archive_case(query)
+                if snapshots is not None:
+                    from evee_next.report import normalize
+                    case['paper'] = snapshots[normalize(query).variant_id]
+                cases.append(case)
+            report = build_report(*cases)
+            if args.format == 'markdown':
+                report = render_markdown(report)
+        else:
+            report = pipeline.analyze(request, policy=policy)
+        if args.output:
+            write_report(args.output, report)
+        elif isinstance(report, str):
+            print(report, end='')
+        else:
+            obj = report if isinstance(report, dict) else report_dict(report)
+            print(json.dumps(obj, sort_keys=True, indent=2, allow_nan=False))
         return 0
-    except (ValueError,OSError,TypeError,KeyError) as exc:
+    except (ValueError,OSError,TypeError,KeyError,NotImplementedError) as exc:
         print(json.dumps({'status':'configuration_or_request_failed','reason':str(exc)}),file=sys.stderr)
         return 2
     finally:

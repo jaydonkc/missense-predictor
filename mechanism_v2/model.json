@@ -1,0 +1,60 @@
+{
+  "protein_id": "ENSP00000377192.3",
+  "reference_sha256": "0725c9221fe1fd935ede4a747d0678459ca0e367b238a1dea22fc4874335cf8f",
+  "activity": {
+    "intercept": 0.36515132781595805,
+    "coef": [
+      -0.025401589318667792,
+      0.009617421716148536,
+      0.03937644999225468
+    ]
+  },
+  "activity_control": {
+    "intercept": 0.7629803929967626,
+    "coef": [
+      -0.5540746842158296
+    ]
+  },
+  "abundance": {
+    "intercept": 0.0004713821177714239,
+    "coef": [
+      1.803821394406411
+    ]
+  },
+  "thresholds": {
+    "activity": 0.5,
+    "abundance": 0.75
+  },
+  "activity_feature_names": [
+    "SaProt_T",
+    "ESMC_LLR",
+    "ThermoMPNN_ddG"
+  ],
+  "abundance_input": "ASPA-fitted relative reporter-abundance percentile fraction",
+  "training_turnover_variants": [
+    "F501C",
+    "F66I",
+    "G163S",
+    "H32R",
+    "I234T",
+    "K238R",
+    "N126D",
+    "R454C",
+    "R459L",
+    "R463H"
+  ],
+  "training_residues": [
+    32,
+    66,
+    126,
+    163,
+    234,
+    238,
+    454,
+    459,
+    463,
+    501
+  ],
+  "training_abundance_rows": 190,
+  "training_missing_features": []
+}

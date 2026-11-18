@@ -1,0 +1,16 @@
+{
+  "assembly": "GRCh38",
+  "chrom": "chr10",
+  "position_0based": 100924241,
+  "ref": "A",
+  "alt": "G",
+  "dna_window": "TGGCAATTCTG",
+  "phylop": -2.7769999504089355,
+  "protein": {
+    "transcript_id": "ENST00000238961.9",
+    "protein_id": "ENSP00000238961.3",
+    "ref_aa": "N",
+    "alt_aa": "S",
+    "residue_1based": 414
+  }
+}

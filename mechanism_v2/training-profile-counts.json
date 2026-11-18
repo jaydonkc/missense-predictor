@@ -1,0 +1,27 @@
+{
+  "training_counts": {
+    "low_activity__low_abundance": 0,
+    "low_activity__preserved_abundance": 5,
+    "retained_activity__low_abundance": 1,
+    "retained_activity__preserved_abundance": 4
+  },
+  "training_labels": {
+    "F501C": "low_activity__preserved_abundance",
+    "F66I": "retained_activity__preserved_abundance",
+    "G163S": "retained_activity__low_abundance",
+    "H32R": "retained_activity__preserved_abundance",
+    "I234T": "low_activity__preserved_abundance",
+    "K238R": "low_activity__preserved_abundance",
+    "N126D": "low_activity__preserved_abundance",
+    "R454C": "retained_activity__preserved_abundance",
+    "R459L": "retained_activity__preserved_abundance",
+    "R463H": "low_activity__preserved_abundance"
+  },
+  "training_plus_primary_profile_counts": {
+    "low_activity__low_abundance": 0,
+    "low_activity__preserved_abundance": 12,
+    "retained_activity__low_abundance": 1,
+    "retained_activity__preserved_abundance": 6
+  },
+  "training_variants": 10
+}

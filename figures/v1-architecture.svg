@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="716" viewBox="0 0 940 716" role="img" aria-labelledby="v1-title v1-desc">
+<title id="v1-title">How V1 scores a human missense variant</title>
+<desc id="v1-desc">Qualified inputs select either the original full-context model or a paper-wide DNA and protein route. The chosen model supplies a clinical score for reporting and retrospective comparison against EVEE.</desc>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#9dbbd1"/></marker></defs>
+<rect width="940" height="716" rx="8" fill="#111b24"/>
+<text x="34" y="48" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#e9f3fa" text-anchor="start">How V1 scores a human missense variant</text>
+<rect x="140" y="76" width="660" height="82" rx="8" fill="#17364c" stroke="#40637a" stroke-width="1.5"/>
+<text x="470" y="109" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#e9f3fa" text-anchor="middle">Verify the allele and its available molecular inputs</text>
+<text x="470" y="137" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#cadde9" text-anchor="middle">GRCh38 reference, transcript, codon and amino-acid change</text>
+<path d="M410 158 V174 Q410 182 402 182 H232 Q224 182 224 190 V204" fill="none" stroke="#9dbbd1" stroke-width="2.6" marker-end="url(#arrow)"/>
+<path d="M530 158 V174 Q530 182 538 182 H679 Q687 182 687 190 V204" fill="none" stroke="#9dbbd1" stroke-width="2.6" marker-end="url(#arrow)"/>
+<rect x="26" y="208" width="396" height="248" rx="8" fill="#17364c" stroke="#40637a" stroke-width="1.5"/>
+<rect x="444" y="208" width="470" height="248" rx="8" fill="#17364c" stroke="#40637a" stroke-width="1.5"/>
+<text x="48" y="244" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#e9f3fa" text-anchor="start">Original full-context route</text>
+<text x="48" y="278" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e9f3fa" text-anchor="start">Requires qualified DNA and protein</text>
+<text x="48" y="303" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e9f3fa" text-anchor="start">features, parent score and held fold.</text>
+<path d="M48 326h350" stroke="#416276"/>
+<text x="48" y="360" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e9f3fa" text-anchor="start">Apply the frozen model for that fold.</text>
+<text x="48" y="391" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e9f3fa" text-anchor="start">Combine its adjusted margin with the</text>
+<text x="48" y="416" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e9f3fa" text-anchor="start">centered parent log-odds.</text>
+<text x="466" y="244" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#e9f3fa" text-anchor="start">Paper-wide routes</text>
+<text x="466" y="278" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#e9f3fa" text-anchor="start">Aligned protein</text>
+<text x="466" y="301" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#cadde9" text-anchor="start">DNA + substitution chemistry + alignment</text>
+<text x="466" y="332" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#e9f3fa" text-anchor="start">Mapped protein, alignment unavailable</text>
+<text x="466" y="355" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#cadde9" text-anchor="start">DNA + substitution chemistry</text>
+<text x="466" y="386" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#e9f3fa" text-anchor="start">Protein mapping unavailable</text>
+<text x="466" y="409" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#cadde9" text-anchor="start">DNA sequence + conservation</text>
+<text x="466" y="439" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#cadde9" text-anchor="start">Each route averages three frozen classifiers.</text>
+<path d="M224 457 V472 Q224 480 232 480 H390 Q398 480 398 488 V500" fill="none" stroke="#9dbbd1" stroke-width="2.6" marker-end="url(#arrow)"/>
+<path d="M687 457 V472 Q687 480 679 480 H550 Q542 480 542 488 V500" fill="none" stroke="#9dbbd1" stroke-width="2.6" marker-end="url(#arrow)"/>
+<rect x="210" y="504" width="520" height="76" rx="8" fill="#17456a" stroke="#88bbdf" stroke-width="1.5"/>
+<text x="470" y="536" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#e9f3fa" text-anchor="middle">V1 pathogenicity score</text>
+<text x="470" y="562" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#e9f3fa" text-anchor="middle">Screen-positive at the development cutoff of 0.43431836</text>
+<path d="M399 580 V595 Q399 603 391 603 H231 Q223 603 223 611 V623" fill="none" stroke="#9dbbd1" stroke-width="2.6" marker-end="url(#arrow)"/>
+<path d="M542 580 V595 Q542 603 550 603 H678 Q686 603 686 611 V623" fill="none" stroke="#9dbbd1" stroke-width="2.6" marker-end="url(#arrow)"/>
+<rect x="26" y="627" width="396" height="68" rx="8" fill="#1a2a37" stroke="#40637a" stroke-width="1.5"/>
+<rect x="444" y="627" width="470" height="68" rx="8" fill="#1a2a37" stroke="#40637a" stroke-width="1.5"/>
+<text x="224" y="654" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#e9f3fa" text-anchor="middle">Variant evidence report</text>
+<text x="224" y="678" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#e9f3fa" text-anchor="middle">Score, route and evidence availability</text>
+<text x="679" y="654" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#e9f3fa" text-anchor="middle">Retrospective benchmark</text>
+<text x="679" y="678" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#e9f3fa" text-anchor="middle">Compare with EVEE at 0.1922 on the same alleles</text>
+</svg>

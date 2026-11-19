@@ -1,0 +1,26 @@
+{
+  "public_source": "https://doi.org/10.5281/zenodo.19701997",
+  "source_archive_sha256": {
+    "clean_shard_0.parquet": "8fc1a374faaf2f0bbd8887ac2506684460f0641a3a399f192cdb88f345454d7a",
+    "clean_shard_1.parquet": "99987b2288a84ad04a84ee2e5c1b7ed8d47bf9bccb139b48723190cbc6d9551d",
+    "clean_shard_2.parquet": "21e86542823a6ed3d021a83dd746117ba647193e8e822fabd71d069d72f0a83d",
+    "clean_shard_3.parquet": "ce09a4bafe735fdfdd8b17e10c8ed191e5d34678294e7daf47006a768bd0980f",
+    "clean_shard_4.parquet": "b70c3593cc3650899022a7f22229ca4ea42a943cf289f9f00db198995664f84e"
+  },
+  "source_sha256": {
+    "PROTOCOL.md": "0f0760205b6bcce734b4d9b800ae0fd71ab0c42b39857dd73427d084e7e53ad6",
+    "locked.tsv": "c47346952ef241b4fb4e75c63ebf240a710c75e34b6b9cee919e027730e249aa",
+    "full-context-scores.tsv": "0499211c75519b49e456dd915431a067ef472a49c2240bf46995b5424cb03160",
+    "public-outcomes.json": "f158d783328c08655867e3312466ed4b2956198fb4ea27c6cbd8449fdf924344",
+    "assembly-driver.json": "eb7e5246248cb00b27efff0f28ff84bcea63db4929ca53713e5ce738af415774",
+    "independent-replay.json": "d666ff8697d08f180800084e361e772849d12bf636ed8192ddbd0c3769557874",
+    "component-evidence.tsv": "2a973953d30259569d5d01e24e97710d6a4b39d2d8254b4f32414b194b93d411"
+  },
+  "development_scores_sha256": "c1135b14ad9613181601d5cbb5fabf173ea596fdab6d2d7a8aa0ea16547e682a",
+  "development_labels_sha256": "639a9dbdcb4bab9e7a38bf66cfa4114342b5c1c0ec958ec33d362bb32218e89e",
+  "files": {
+    "scored_variants.tsv.gz": "584766d2f4a2b28b3e30166354e8e6169b60c2b2097dc6f942629836d01c6465",
+    "development_counts.tsv.gz": "e9e8eacaf9e4f14248eb7e7643268f08463bd4ec4d82209feb85e68c660a8124",
+    "evidence_availability.tsv.gz": "6d2263383b987b5edb6639fd66ea90aedef455882451ba8df62a06b1741404b4"
+  }
+}

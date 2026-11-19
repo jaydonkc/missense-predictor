@@ -1,8 +1,10 @@
 # Human missense predictor
 
-This research release scores human missense variants from prepared molecular features and reports testable assay predictions on supported proteins. EVEE is the clinical benchmark. V1 scores the clinical endpoint. V2 tests a biological hypothesis.
+This research release scores human missense variants from prepared molecular features and reports testable assay predictions on supported proteins. EVEE is the clinical benchmark.
 
-- **V1 clinical score.** The frozen paper-wide heads score a prepared GRCh38 allele. The report records the route and operating cutoff. On 161,579 variants outside historical training and development the model missed 2,689 pathogenic variants versus EVEE's 2,911, and flagged 22,372 benign variants versus EVEE's 12,752. [Architecture, decisions and benchmarks](REPORT.md) · [Full replay receipt](predictor_v1/verification.json)
+**Full-context benchmark.** On the same 10,000 human missense variants outside historical training and development, our predictor made 707 errors versus EVEE’s 786 at the prespecified development-selected cutoffs. A later comparison choosing both cutoffs on the same development variants gave 707 versus 814. At the common paper cutoff of 0.5, EVEE made 806 errors versus our predictor’s 923. [Four-row comparison and architecture](REPORT.md) · [Data, DGX workflow and CPU replay](benchmarks/full_context/README.md)
+
+- **Paper-wide scoring.** A separate, earlier benchmark used fallback routes for all 161,579 outside-development variants. The report retains those results and identifies the inputs each route needs.
 - **V2 experimental assay profile.** A frozen G6PD model estimates catalytic turnover relative to wild type and normalized human-cell reporter abundance. A lookup covers 9,676 substitutions on one human G6PD reference. The clinical predictor does not consume these experimental estimates. On nine substitutions at held-out residues, V2 correctly predicted both measurements for four, versus three for an abundance-only control. [V2 results and reproducible evaluation](mechanism_v2/README.md)
 
 ## Run the predictors

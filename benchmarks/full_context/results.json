@@ -1,0 +1,66 @@
+{
+  "variants": 10000,
+  "operating_points": [
+    {
+      "rule": "Same development set",
+      "model": "Our predictor",
+      "cutoff": 0.7278858715285142,
+      "misses": 293,
+      "false_alarms": 414,
+      "errors": 707,
+      "accuracy": 0.9293
+    },
+    {
+      "rule": "Same development set",
+      "model": "EVEE",
+      "cutoff": 0.3484,
+      "misses": 310,
+      "false_alarms": 504,
+      "errors": 814,
+      "accuracy": 0.9186
+    },
+    {
+      "rule": "Paper cutoff",
+      "model": "Our predictor",
+      "cutoff": 0.5,
+      "misses": 163,
+      "false_alarms": 760,
+      "errors": 923,
+      "accuracy": 0.9077
+    },
+    {
+      "rule": "Paper cutoff",
+      "model": "EVEE",
+      "cutoff": 0.5,
+      "misses": 499,
+      "false_alarms": 307,
+      "errors": 806,
+      "accuracy": 0.9194
+    },
+    {
+      "rule": "Prespecified comparator",
+      "model": "EVEE",
+      "cutoff": 0.3738,
+      "misses": 332,
+      "false_alarms": 454,
+      "errors": 786,
+      "accuracy": 0.9214
+    }
+  ],
+  "same_development": {
+    "repaired": 340,
+    "introduced": 233,
+    "fewer_errors_per_1000_ci95": [
+      4.584,
+      16.916
+    ]
+  },
+  "prespecified": {
+    "repaired": 314,
+    "introduced": 235,
+    "fewer_errors_per_1000_ci95": [
+      2.294,
+      13.6
+    ]
+  }
+}

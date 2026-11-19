@@ -122,6 +122,22 @@ class Predictor:
         self.context = state["full_context"]
         self.full = parse_heads(self.context.pop("heads"))
 
+    def full_context_scores(self, fold, parents, features):
+        """Score qualified rows for one frozen head, in manifest feature order."""
+        parents = np.asarray(parents, dtype=float)
+        features = np.asarray(features, dtype=float)
+        if type(fold) is not int or fold not in range(3):
+            raise ValueError("Expected a frozen fold from 0 to 2")
+        if parents.ndim != 1 or features.shape != (parents.size, len(self.context["features"])):
+            raise ValueError("Full-context feature matrix must align with parent scores")
+        if not np.isfinite(parents).all() or np.any((parents < 0) | (parents > 1)):
+            raise ValueError("Expected finite parent scores between zero and one")
+        if np.isinf(features).any():
+            raise ValueError("Use NaN for qualified missing features")
+        base = logit(np.clip(parents, 1e-12, 1 - 1e-12)) - logit(self.context["parent_cutoff"])
+        margin = base + raw_margin(self.full[fold], features) - .5 * self.context["calibration"][fold]
+        return expit(margin / 2)
+
     def score(self, variant):
         if not isinstance(variant, dict) or not COORDINATES <= set(variant) or variant["assembly"] != "GRCh38":
             raise ValueError("Expected a prepared GRCh38 variant")
@@ -143,9 +159,8 @@ class Predictor:
             if set(context["features"]) != set(cols):
                 raise ValueError("Full-context fields must exactly match the frozen feature schema")
             x = np.asarray([[number(context["features"][key]) for key in cols]], dtype=float)
-            base = logit(np.clip(parent, 1e-12, 1 - 1e-12)) - logit(self.context["parent_cutoff"])
-            margin = base + raw_margin(self.full[fold], x)[0] - .5 * self.context["calibration"][fold]
-            score, route = float(expit(margin / 2)), "original full context"
+            score = float(self.full_context_scores(fold, np.array([parent]), x)[0])
+            route = "original full context"
         else:
             required = COORDINATES | {"phylop", "dna_window"}
             if set(variant) not in (required, required | {"protein"}):
